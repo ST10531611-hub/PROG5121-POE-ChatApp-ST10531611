@@ -7,6 +7,7 @@ public class POE_ThishriaVelayudan {
     public static void main(String[] args) {
       Scanner input=new Scanner(System.in);
       
+        System.out.println("=============== Welcome to Chat App ===============");
       System.out.print("Enter a username: ");
         String userName = input.nextLine();
 
@@ -15,7 +16,15 @@ public class POE_ThishriaVelayudan {
         
           Login login = new Login(userName, password);
 
-        String registrationResult=login.registerUser();
+          
+          
+          System.out.print("Enter your cellphone number (e.g. +27635189485): ");
+          String cellPhoneNumber = input.nextLine();
+           login.setCellPhoneNumber(cellPhoneNumber);
+ 
+         
+         
+         String registrationResult=login.registerUser();
       System.out.println(registrationResult);
 
       if (registrationResult.equals("User registered successfully!")) {
@@ -28,11 +37,12 @@ public class POE_ThishriaVelayudan {
      boolean loginResult=login.loginUser(loginUserName, loginPassword);
            System.out.println(login.returnLoginStatus());
 
+           
             if (loginResult)
             {
                 System.out.println("Welcome, " + login.getUserName() + "!");
             } else {
-                System.out.println("Login failed. Please check your credentials.");
+                System.out.println("Login failed! Please check your credentials.");
             }
            }
 

@@ -9,10 +9,15 @@ public class Login {
     private String storedPassword;
     private String loginstatus;
 
-    //Construtor
+    //Constructor
     public Login(String userName, String password) {
         this.userName = userName;
         this.password = password;
+        
+    }
+
+    public String getCellPhoneNumber() {
+        return cellPhoneNumber;
     }
 
     public String getUserName() {
@@ -45,6 +50,10 @@ public class Login {
 
     public void setStoredPassword(String storedPassword) {
         this.storedPassword = storedPassword;
+    }
+
+    public void setCellPhoneNumber(String cellPhoneNumber) {
+        this.cellPhoneNumber = cellPhoneNumber;
     }
 
     //Behavioral Methods
@@ -82,6 +91,9 @@ public class Login {
         if (!checkPasswordComplexity()){
             return "Password does not meet complexity requirements";
         }
+        if (cellPhoneNumber==null || !cellPhoneNumber.matches("\\+27\\d{9}"))
+            return "Cellphone Number not formatted properly !";
+        
         storedPassword=password;
         storedUsername=userName;
         return "User registered successfully!";
@@ -90,11 +102,12 @@ public class Login {
     public Boolean loginUser(String userName, String password) {
                 
      if (userName.equals(storedUsername) && password.equals(storedPassword)) {
-                     loginstatus="successful login";
+                     System.out.println("=========================================");
+                     loginstatus="Successfully logged in !!! \n WELCOME " + userName;
                      return true;
     }else{
-         
-      loginstatus="successful login";
+         System.out.println("=========================================");
+      loginstatus="Failed to login !!, Try again";
                   
         return false;
          }
