@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestClasses.Test_Chat_App" time="0.129" tests="11" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestClasses.Test_Chat_App" time="0.051" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,9 +15,9 @@
     <property name="user.country" value="ZA"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Apache NetBeans\jdk\bin"/>
-    <property name="sun.java.command" value="C:\Users\thish\AppData\Local\Temp\surefire16780718095646061235\surefirebooter-20260410100658892_3.jar C:\Users\thish\AppData\Local\Temp\surefire16780718095646061235 2026-04-10T10-06-58_748-jvmRun1 surefire-20260410100658892_1tmp surefire_0-20260410100658892_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\thish\AppData\Local\Temp\surefire11706234173623175921\surefirebooter-20260412203035562_3.jar C:\Users\thish\AppData\Local\Temp\surefire11706234173623175921 2026-04-12T20-30-35_409-jvmRun1 surefire-20260412203035562_1tmp surefire_0-20260412203035562_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="test" value="TestClasses.Test_Chat_App"/>
+    <property name="test" value="TestClasses.Test_Chat_App#testUsernameFormatCorrect"/>
     <property name="surefire.test.class.path" value="C:\git\POE\PROG5121-POE-ChatApp-ST10531611\target\test-classes;C:\git\POE\PROG5121-POE-ChatApp-ST10531611\target\classes;C:\Users\thish\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\thish\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\thish\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\thish\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\thish\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\thish\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\thish\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\thish"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\thish\AppData\Local\Temp\surefire16780718095646061235\surefirebooter-20260410100658892_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\thish\AppData\Local\Temp\surefire11706234173623175921\surefirebooter-20260412203035562_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="25.0.2+10-LTS"/>
@@ -62,46 +62,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="testPasswordBooleanIncorrect" classname="TestClasses.Test_Chat_App" time="0.04"/>
-  <testcase name="testPasswordBooleanCorrect" classname="TestClasses.Test_Chat_App" time="0.004"/>
-  <testcase name="testCellNumberIncorrect" classname="TestClasses.Test_Chat_App" time="0.004"/>
-  <testcase name="testPasswordCorrect" classname="TestClasses.Test_Chat_App" time="0.01">
-    <failure message="expected: &lt;Password successfully captured&gt; but was: &lt;User has been registered successfully !!&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Password successfully captured> but was: <User has been registered successfully !!>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at TestClasses.Test_Chat_App.testPasswordCorrect(Test_Chat_App.java:45)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-]]></failure>
-    <system-out><![CDATA[Username successfully captured
-Password successfully captured
-]]></system-out>
-  </testcase>
-  <testcase name="testUsernameIncorrect" classname="TestClasses.Test_Chat_App" time="0.001"/>
-  <testcase name="testLoginFailed" classname="TestClasses.Test_Chat_App" time="0.001"/>
-  <testcase name="testUsernameBoolean" classname="TestClasses.Test_Chat_App" time="0.001"/>
-  <testcase name="testPasswordIncorrect" classname="TestClasses.Test_Chat_App" time="0.003">
-    <failure message="expected: &lt;Password is not correctly formatted; please ensure that the password contains at least eight characters, a capital letter, a number, and a special character.&gt; but was: &lt;Password is not correctly formatted; please ensure that the password contians at least eight characters ,a capital letter,a number, and a special character.&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Password is not correctly formatted; please ensure that the password contains at least eight characters, a capital letter, a number, and a special character.> but was: <Password is not correctly formatted; please ensure that the password contians at least eight characters ,a capital letter,a number, and a special character.>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at TestClasses.Test_Chat_App.testPasswordIncorrect(Test_Chat_App.java:55)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-]]></failure>
-    <system-out><![CDATA[Username successfully captured
-]]></system-out>
-  </testcase>
-  <testcase name="testLoginSuccessful" classname="TestClasses.Test_Chat_App" time="0.003"/>
-  <testcase name="testUsernameCorrect" classname="TestClasses.Test_Chat_App" time="0.001"/>
-  <testcase name="testCellNumberCorrect" classname="TestClasses.Test_Chat_App" time="0.001"/>
+  <testcase name="testUsernameFormatCorrect" classname="TestClasses.Test_Chat_App" time="0.026"/>
 </testsuite>
