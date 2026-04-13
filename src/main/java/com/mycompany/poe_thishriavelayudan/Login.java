@@ -119,10 +119,10 @@ public class Login
     }
     
     
-//check cell phone number ,starts with +27 and 12 chars total
+// Regex used to validate South African number format (+27 followed by 9 digits)
     public Boolean checkCellPhoneNumber()
     {
-        if (cellPhoneNumber != null && cellPhoneNumber.startsWith("+27") && cellPhoneNumber.length() == 12)
+        if (cellPhoneNumber != null && cellPhoneNumber.matches("^\\+27\\d{9}"))
         {
             Status="Cell number successfully captured.";
             return true;
@@ -149,7 +149,7 @@ public class Login
     public Boolean loginUser(String lUserName, String lPassword) 
     {
         if (lUserName != null && lUserName.equals(userName) &&
-            (lPassword == null || lPassword.isEmpty() || lPassword.equals(password)))
+            (lPassword == null ||lPassword.isEmpty()|| lPassword.equals(password)))
         {
             LoginStatus = "Welcome " + firstName + "," + lastName + " it is great to see you again";
             return true;
